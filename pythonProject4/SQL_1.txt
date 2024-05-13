@@ -1,5 +1,5 @@
 SELECT DISTINCT c."login", COUNT(c."id") FROM "Couriers" AS c INNER JOIN "Orders" AS o ON c."id" = o."courierId" WHERE o."inDelivery"=true GROUP BY c."login", o."inDelivery";
-# ответ на первы вопрос
+# ответ на первый вопрос
 
 SELECT "track", CASE WHEN "finished"=true THEN 1 WHEN "cancelled"=true THEN -1 WHEN "inDelivery"=true THEN 1 ELSE 0 END FROM "Orders";
 # ответ на второй вопрос
