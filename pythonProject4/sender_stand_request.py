@@ -13,6 +13,5 @@ def post_new_orders():
 def get_orders_track():
     url = configuration.URL_SERVICE + configuration.READ_ORDERS_TRACK
     new_body = data.orders_track.copy()
-    print(new_body)
     headers = data.headers.copy()
     return requests.get(url, params=new_body, headers=headers)
